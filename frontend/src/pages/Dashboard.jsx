@@ -46,7 +46,7 @@ export default function Dashboard() {
     }
   };
 
-  const groupIcons = ['👥', '🏠', '✈️', '🍕', '🎉', '💼', '🎮', '🛒'];
+  const groupIcons = ['G', 'H', 'T', 'F', 'E', 'B', 'P', 'S'];
   const getIcon = (id) => groupIcons[id % groupIcons.length];
 
   if (loading) {
@@ -61,7 +61,7 @@ export default function Dashboard() {
     <div className="dashboard">
       <div className="dashboard-header">
         <div>
-          <h1>Hello, {user?.name?.split(' ')[0]} 👋</h1>
+          <h1>Hello, {user?.name?.split(' ')[0]}</h1>
           <p className="subtitle">Manage your shared expenses</p>
         </div>
         <button className="btn btn-primary" onClick={() => setShowModal(true)}>
@@ -71,7 +71,7 @@ export default function Dashboard() {
 
       {groups.length === 0 ? (
         <div className="empty-state">
-          <div className="empty-icon">📋</div>
+          <div className="empty-icon">...</div>
           <h3>No groups yet</h3>
           <p>Create a group to start splitting expenses with friends.</p>
         </div>
@@ -87,7 +87,7 @@ export default function Dashboard() {
               <div>
                 <h3>{group.name}</h3>
                 <div className="group-meta">
-                  <span>👤 {group.member_count} member{group.member_count !== 1 ? 's' : ''}</span>
+                  <span>Members: {group.member_count}</span>
                   <span>By {group.created_by_name}</span>
                 </div>
               </div>

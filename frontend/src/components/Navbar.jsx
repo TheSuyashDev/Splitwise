@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/dashboard" className="navbar-logo">
-        <span className="logo-icon">💰</span>
+        <span className="logo-icon">S</span>
         Splitwise
       </Link>
 

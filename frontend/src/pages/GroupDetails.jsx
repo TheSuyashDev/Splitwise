@@ -211,7 +211,7 @@ export default function GroupDetails() {
             + Add Member
           </button>
           <button className="btn btn-success" onClick={() => { setFormError(''); setShowSettle(true); }}>
-            💸 Settle Up
+            Settle Up
           </button>
           <button className="btn btn-primary" onClick={() => { resetExpenseForm(); setShowAddExpense(true); }}>
             + Add Expense
@@ -237,7 +237,7 @@ export default function GroupDetails() {
         <div className="card">
           {expenses.length === 0 ? (
             <div className="empty-state">
-              <div className="empty-icon">🧾</div>
+              <div className="empty-icon">...</div>
               <h3>No expenses yet</h3>
               <p>Add your first expense to start tracking.</p>
             </div>
@@ -245,7 +245,7 @@ export default function GroupDetails() {
             expenses.map((expense) => (
               <div key={expense.id} className="expense-item">
                 <div className="expense-info">
-                  <div className="expense-icon">🧾</div>
+                  <div className="expense-icon">E</div>
                   <div>
                     <div className="expense-desc">{expense.description || 'Untitled Expense'}</div>
                     <div className="expense-by">
@@ -283,7 +283,7 @@ export default function GroupDetails() {
                 <div className={`balance-amount ${b.net_balance > 0 ? 'balance-positive' : b.net_balance < 0 ? 'balance-negative' : 'balance-zero'}`}>
                   {b.net_balance > 0 ? `Gets back ${formatCurrency(b.net_balance)}`
                     : b.net_balance < 0 ? `Owes ${formatCurrency(Math.abs(b.net_balance))}`
-                    : 'Settled up ✓'}
+                    : 'Settled up'}
                 </div>
               </div>
             ))
@@ -315,7 +315,7 @@ export default function GroupDetails() {
         <div className="card">
           {settlements.length === 0 ? (
             <div className="empty-state">
-              <div className="empty-icon">💸</div>
+              <div className="empty-icon">...</div>
               <h3>No settlements yet</h3>
               <p>Settle debts when you're ready.</p>
             </div>
